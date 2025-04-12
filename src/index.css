@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -16,11 +16,11 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 262 80% 75%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 39 38% 92%;
+    --primary-foreground: 0 0% 10%;
 
-    --secondary: 260 25% 54%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 222 14% 14%;
+    --secondary-foreground: 0 0% 98%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -43,31 +43,31 @@
   }
 
   body {
-    @apply bg-background text-foreground font-['Poppins',sans-serif];
+    @apply bg-[#f8f3eb] text-foreground font-['Inter',sans-serif];
   }
 }
 
 @layer components {
   .section-header {
-    @apply text-3xl md:text-4xl font-semibold text-madhwa-deep-purple mb-6 relative inline-block;
+    @apply text-3xl md:text-4xl font-semibold text-[#1A1F2C] mb-6 relative inline-block;
   }
   
   .section-header::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-madhwa-purple rounded-full;
+    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-[#1A1F2C]/60 rounded-full;
   }
   
   .spiritual-card {
-    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-madhwa-light-gray;
+    @apply bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-[#1A1F2C]/10;
   }
   
   .nav-item {
-    @apply relative px-4 py-2 text-madhwa-deep-purple hover:text-madhwa-purple transition-colors duration-300;
+    @apply relative px-4 py-2 text-[#1A1F2C] hover:text-[#1A1F2C]/70 transition-colors duration-300;
   }
   
   .nav-item::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-madhwa-purple transition-all duration-300 ease-in-out;
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-[#1A1F2C]/60 transition-all duration-300 ease-in-out;
   }
   
   .nav-item:hover::after {
@@ -75,11 +75,11 @@
   }
   
   .btn-primary {
-    @apply bg-madhwa-purple text-white rounded-md px-6 py-3 hover:bg-madhwa-dark-purple transition-colors duration-300 font-medium;
+    @apply bg-[#1A1F2C] text-white rounded-md px-6 py-3 hover:bg-[#1A1F2C]/90 transition-colors duration-300 font-medium;
   }
   
   .btn-secondary {
-    @apply bg-transparent border border-madhwa-purple text-madhwa-purple rounded-md px-6 py-3 hover:bg-madhwa-purple hover:text-white transition-colors duration-300 font-medium;
+    @apply bg-transparent border border-[#1A1F2C] text-[#1A1F2C] rounded-md px-6 py-3 hover:bg-[#1A1F2C]/10 transition-colors duration-300 font-medium;
   }
   
   .section-padding {
