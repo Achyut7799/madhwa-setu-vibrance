@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <div className="bg-gradient-to-r from-madhwa-purple/10 to-madhwa-blue/10 pt-10 pb-16 md:pt-16 md:pb-24">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col-reverse md:flex-row items-center">
+        <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 text-center md:text-left animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-madhwa-deep-purple leading-tight">
               The Digital
@@ -30,12 +30,8 @@ const HeroSection = () => {
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-madhwa-pink rounded-full opacity-30 animate-pulse"></div>
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-madhwa-blue rounded-full opacity-30 animate-pulse"></div>
-              <div className="relative z-10 rounded-lg overflow-hidden shadow-xl">
-                <img 
-                  src="public/lovable-uploads/eef25478-79f3-4eaf-ad1d-898f840341b2.png" 
-                  alt="Madhwa Community" 
-                  className="w-full h-auto rounded-lg"
-                />
+              <div className="relative z-10 rounded-lg overflow-hidden shadow-xl bg-madhwa-purple/10 h-[300px] flex items-center justify-center">
+                <p className="text-madhwa-purple text-xl font-medium">MadhwaSetu Digital Experience</p>
               </div>
             </div>
           </div>

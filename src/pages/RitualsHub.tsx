@@ -5,19 +5,16 @@ const ritualCategories = [
   {
     id: 1,
     title: "Daily Rituals",
-    thumbnail: "public/lovable-uploads/bd17618b-08ad-4e33-9708-139e56aab9be.png",
     count: 5
   },
   {
     id: 2,
     title: "Festival Rituals",
-    thumbnail: "public/lovable-uploads/eef25478-79f3-4eaf-ad1d-898f840341b2.png",
     count: 12
   },
   {
     id: 3,
     title: "Life Stage Rituals",
-    thumbnail: "public/lovable-uploads/bfd71402-1307-4f8c-8b39-b114d83e993f.png",
     count: 8
   }
 ];
@@ -36,12 +33,8 @@ const RitualsHub = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {ritualCategories.map((category) => (
             <div key={category.id} className="spiritual-card overflow-hidden group cursor-pointer">
-              <div className="relative">
-                <img 
-                  src={category.thumbnail} 
-                  alt={category.title}
-                  className="w-full h-48 object-cover"
-                />
+              <div className="relative h-48 bg-madhwa-purple/10 flex items-center justify-center">
+                <p className="text-madhwa-purple">Ritual Guide Category</p>
                 <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <button className="bg-madhwa-purple text-white rounded-full p-3 transform hover:scale-110 transition-transform">
                     <BookOpen />
@@ -102,12 +95,8 @@ const RitualsHub = () => {
         <div className="spiritual-card p-6 md:p-8">
           <h2 className="text-2xl font-semibold text-madhwa-deep-purple mb-6">Visual Guide Example</h2>
           <div className="flex flex-col md:flex-row gap-8">
-            <div className="md:w-1/2">
-              <img 
-                src="public/lovable-uploads/bd17618b-08ad-4e33-9708-139e56aab9be.png" 
-                alt="Visual Ritual Guide"
-                className="w-full h-auto rounded-lg"
-              />
+            <div className="md:w-1/2 bg-madhwa-purple/10 h-[200px] flex items-center justify-center rounded-lg">
+              <p className="text-madhwa-purple">Visual Guide Coming Soon</p>
             </div>
             <div className="md:w-1/2">
               <h3 className="text-xl font-medium text-madhwa-purple mb-3">Daily Sandhyavandana</h3>

@@ -6,21 +6,18 @@ const pravachans = [
     id: 1,
     title: "Introduction to Dvaita Philosophy",
     duration: "3 minutes",
-    thumbnail: "public/lovable-uploads/bd17618b-08ad-4e33-9708-139e56aab9be.png",
     category: "Philosophy"
   },
   {
     id: 2,
     title: "Understanding the Five Differences",
     duration: "4 minutes",
-    thumbnail: "public/lovable-uploads/eef25478-79f3-4eaf-ad1d-898f840341b2.png",
     category: "Philosophy"
   },
   {
     id: 3,
     title: "Daily Rituals and Their Significance",
     duration: "5 minutes",
-    thumbnail: "public/lovable-uploads/bfd71402-1307-4f8c-8b39-b114d83e993f.png",
     category: "Rituals"
   }
 ];
@@ -50,12 +47,8 @@ const PravachansPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {pravachans.map((pravachan) => (
             <div key={pravachan.id} className="spiritual-card overflow-hidden group">
-              <div className="relative">
-                <img 
-                  src={pravachan.thumbnail} 
-                  alt={pravachan.title}
-                  className="w-full h-48 object-cover"
-                />
+              <div className="relative h-48 bg-madhwa-purple/10 flex items-center justify-center">
+                <p className="text-madhwa-purple">Pravachan Video Coming Soon</p>
                 <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <button className="bg-madhwa-purple text-white rounded-full p-3 transform hover:scale-110 transition-transform">
                     <Play />
