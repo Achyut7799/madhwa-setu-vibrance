@@ -1,5 +1,5 @@
-
 import { BookOpen, Check } from "lucide-react";
+import { useState } from "react";
 
 const ritualCategories = [
   {
@@ -20,6 +20,8 @@ const ritualCategories = [
 ];
 
 const RitualsHub = () => {
+  const [showDailyDetails, setShowDailyDetails] = useState(false);
+
   return (
     <div className="py-12 md:py-20">
       <div className="container mx-auto px-4">
@@ -44,13 +46,38 @@ const RitualsHub = () => {
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-madhwa-deep-purple">{category.title}</h3>
                 <p className="text-sm text-madhwa-deep-purple/70 mt-1">{category.count} rituals</p>
-                <button className="mt-3 text-madhwa-purple hover:text-madhwa-dark-purple text-sm font-medium">
-                  Explore Guides →
-                </button>
+                {category.title === "Daily Rituals" ? (
+                  <button
+                    onClick={() => setShowDailyDetails(true)}
+                    className="mt-3 text-madhwa-purple hover:text-madhwa-dark-purple text-sm font-medium"
+                  >
+                    Explore Guides →
+                  </button>
+                ) : (
+                  <button className="mt-3 text-madhwa-purple hover:text-madhwa-dark-purple text-sm font-medium">
+                    Explore Guides →
+                  </button>
+                )}
               </div>
             </div>
           ))}
         </div>
+
+        {/* Additional Daily Rituals Block */}
+        {showDailyDetails && (
+          <div className="spiritual-card p-6 md:p-8 mb-16">
+            <h2 className="text-2xl font-semibold text-madhwa-deep-purple mb-6">Daily Rituals – Expanded Guide</h2>
+            <ul className="space-y-4 list-disc list-inside text-madhwa-deep-purple/80">
+              <li>Waking up early in the morning</li>
+              <li>Performing pooja</li>
+              <li>Perform Sandhyavandana daily if possible</li>
+              <li>Learn the meaning behind each ritual step</li>
+              <li>Maintain physical purity during rituals</li>
+              <li>Recite mantras with correct pronunciation</li>
+              <li>Prepare proper offerings as prescribed</li>
+            </ul>
+          </div>
+        )}
 
         <div className="bg-madhwa-light-gray rounded-lg p-8 mb-16">
           <h2 className="text-2xl font-semibold text-madhwa-deep-purple mb-6">Do's & Don'ts</h2>
